@@ -7,15 +7,10 @@ class Shoe
   def initialize(brand)
     @brand = brand
     unless BRANDS.include?(brand)
-      BRANDS.push(brand)
+      BRANDS << brand
     end
   end
-  
-  def brand=(brand)
-    @brand = brand
-    BRANDS.push(brand)
-  end  
-    
+
 
   def cobble
     self.condition = "new"
